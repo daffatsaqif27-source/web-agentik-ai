@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentix AI — Sekolah Lebih Cerdas, Orang Tua Lebih Tenang</title>
+<style>
+:root{
+  --bg:#07111f;--bg2:#0b1830;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.12);
+  --text:#f7fbff;--muted:#a9b8ca;--blue:#4da3ff;--cyan:#50e3ff;--green:#58e6a4;
+  --shadow:0 25px 80px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:
+radial-gradient(circle at 80% 0%,rgba(77,163,255,.18),transparent 35%),linear-gradient(180deg,var(--bg),#050b14 70%);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,92%);z-index:20;padding:12px 16px;border:1px solid var(--line);border-radius:18px;background:rgba(7,17,31,.72);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:20px;letter-spacing:-.5px}.logo span{color:var(--cyan)}nav .links{display:flex;gap:24px;color:#c6d2e1;font-size:14px}nav .cta{padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#03101b;font-weight:800}
+.hero{min-height:100vh;display:grid;place-items:center;padding:150px 0 80px;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,#000,transparent 85%);pointer-events:none}
+.orb{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(80,227,255,.18),transparent 68%);filter:blur(10px);animation:float 7s ease-in-out infinite}
+.o1{top:12%;left:5%}.o2{right:-100px;top:25%;animation-delay:-3s}
+.hero-inner{text-align:center;max-width:920px;position:relative;z-index:1}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(80,227,255,.25);background:rgba(80,227,255,.07);padding:8px 13px;border-radius:999px;color:#bcefff;font-size:13px;font-weight:700;animation:fadeUp .8s both}
+h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:24px 0 20px}
+.gradient{background:linear-gradient(100deg,#fff 15%,#80dfff 55%,#4da3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:19px;line-height:1.65;color:var(--muted);max-width:720px;margin:0 auto}
+.actions{display:flex;justify-content:center;gap:12px;margin:32px 0;flex-wrap:wrap}.btn{padding:15px 22px;border-radius:14px;font-weight:850;border:1px solid var(--line);transition:.25s}
+.btn.primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#04101a;box-shadow:0 12px 35px rgba(77,163,255,.25)}
+.btn.secondary{background:rgba(255,255,255,.04)}.btn:hover{transform:translateY(-3px)}
+.trust{font-size:12px;color:#718198;margin-top:18px}
+.dashboard{margin:55px auto 0;max-width:950px;border:1px solid var(--line);border-radius:24px;padding:12px;background:rgba(255,255,255,.035);box-shadow:var(--shadow);transform:perspective(1200px) rotateX(5deg);animation:float 6s ease-in-out infinite}
+.screen{border-radius:16px;background:linear-gradient(145deg,#0d1d34,#08121f);padding:20px;text-align:left}
+.topbar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 15px var(--green)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.stat,.feature{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}.stat b{font-size:24px}.mini{height:95px;margin-top:12px;border-radius:12px;background:linear-gradient(180deg,rgba(77,163,255,.13),rgba(77,163,255,.02));position:relative;overflow:hidden}.chart{position:absolute;inset:18px 15px;background:linear-gradient(155deg,transparent 45%,rgba(80,227,255,.8) 46%,transparent 48%);clip-path:polygon(0 70%,15% 52%,28% 64%,42% 30%,58% 45%,72% 18%,86% 36%,100% 5%,100% 100%,0 100%)}
+section{padding:110px 0}.eyebrow{color:var(--cyan);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px}.section-title{font-size:clamp(34px,5vw,56px);letter-spacing:-2px;line-height:1.05;margin:12px 0 16px}.section-copy{color:var(--muted);max-width:680px;line-height:1.7}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}.feature h3{margin:14px 0 8px}.feature p{color:var(--muted);line-height:1.55;font-size:14px}.icon{font-size:25px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.flow{display:grid;gap:12px}.step{display:flex;gap:16px;padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);transition:.3s}.step:hover{transform:translateX(8px);background:rgba(77,163,255,.08)}.num{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(80,227,255,.12);color:var(--cyan);font-weight:900;flex:none}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.metric{padding:28px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--line)}.metric strong{font-size:42px}.metric p{color:var(--muted);margin-bottom:0}
+.cta-box{position:relative;overflow:hidden;text-align:center;padding:70px 30px;border:1px solid rgba(80,227,255,.2);border-radius:28px;background:radial-gradient(circle at 50% 0%,rgba(80,227,255,.14),transparent 55%),rgba(255,255,255,.035)}
+footer{padding:35px 0 50px;color:#718198;border-top:1px solid var(--line);font-size:13px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@keyframes float{50%{transform:translateY(-10px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@media(max-width:800px){nav .links{display:none}.stats,.features,.metrics{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:35px}h1{letter-spacing:-2.5px}.dashboard{transform:none}}
+@media(max-width:520px){.stats,.features,.metrics{grid-template-columns:1fr}.hero{padding-top:125px}.sub{font-size:16px}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#">Agentix <span>AI</span></a>
+  <div class="links"><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara Kerja</a><a href="#hasil">Hasil</a></div>
+  <a class="cta" href="#demo">Minta Demo</a>
+</nav>
+
+<header class="hero">
+  <div class="grid"></div><div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hero-inner container">
+    <div class="badge">✦ Platform Manajemen Sekolah Modern</div>
+    <h1>Sekolah Lebih <span class="gradient">Cerdas.</span><br>Orang Tua Lebih Tenang.</h1>
+    <p class="sub">Agentix AI menyatukan absensi RFID, cashless school, POS, data siswa, dan portal orang tua dalam satu ekosistem yang mudah digunakan.</p>
+    <div class="actions"><a class="btn primary" href="#demo">Jadwalkan Demo Gratis →</a><a class="btn secondary" href="#fitur">Lihat Fitur</a></div>
+    <div class="trust">Dibangun untuk sekolah Indonesia • Web responsive • Multi-school ready</div>
+    <div class="dashboard">
+      <div class="screen">
+        <div class="topbar"><b>Agentix School Dashboard</b><span><i class="dot"></i> Sistem aktif</span></div>
+        <div class="stats"><div class="stat"><small>Siswa Aktif</small><br><b>1,248</b></div><div class="stat"><small>Hadir Hari Ini</small><br><b>96.4%</b></div><div class="stat"><small>Transaksi</small><br><b>842</b></div><div class="stat"><small>Saldo Wallet</small><br><b>Rp 18,4M</b></div></div>
+        <div class="mini"><div class="chart"></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="fitur" class="container reveal">
+  <div class="eyebrow">Satu platform</div>
+  <h2 class="section-title">Semua operasional sekolah,<br><span class="gradient">terhubung otomatis.</span></h2>
+  <p class="section-copy">Kurangi pekerjaan manual dan buat setiap aktivitas sekolah lebih transparan—dari gerbang sampai kantin, semuanya tersinkron.</p>
+  <div class="features">
+    <div class="feature"><div class="icon">📡</div><h3>RFID & Absensi</h3><p>Absensi otomatis dan pencatatan kedatangan siswa tanpa input berulang.</p></div>
+    <div class="feature"><div class="icon">💳</div><h3>Cashless School</h3><p>Wallet siswa terhubung dengan transaksi kantin dan kebutuhan sekolah.</p></div>
+    <div class="feature"><div class="icon">📊</div><h3>School Dashboard</h3><p>Pantau siswa, pembayaran, transaksi, dan aktivitas sekolah dari satu dashboard.</p></div>
+    <div class="feature"><div class="icon">👨‍👩‍👧</div><h3>Portal Orang Tua</h3><p>Orang tua dapat melihat saldo, absensi, tagihan, dan transaksi secara real-time.</p></div>
+  </div>
+</section>
+
+<section id="cara-kerja" class="container reveal">
+  <div class="split">
+    <div><div class="eyebrow">Ekosistem Agentix</div><h2 class="section-title">Satu transaksi.<br><span class="gradient">Semua langsung sinkron.</span></h2><p class="section-copy">Agentix dirancang agar data tidak berhenti di satu modul. Saat siswa bertransaksi, sistem dapat memperbarui wallet, POS, dashboard sekolah, portal orang tua, dan notifikasi secara terintegrasi.</p></div>
+    <div class="flow">
+      <div class="step"><div class="num">1</div><div><b>Siswa tap kartu RFID</b><br><small>Identitas terverifikasi otomatis.</small></div></div>
+      <div class="step"><div class="num">2</div><div><b>Transaksi diproses</b><br><small>Saldo dan riwayat tercatat.</small></div></div>
+      <div class="step"><div class="num">3</div><div><b>Data tersinkron</b><br><small>POS, sekolah, wallet & portal ikut ter-update.</small></div></div>
+      <div class="step"><div class="num">4</div><div><b>Orang tua mendapat informasi</b><br><small>Notifikasi dan riwayat lebih transparan.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hasil" class="container reveal">
+  <div class="eyebrow">Dampak bisnis</div><h2 class="section-title">Lebih sedikit pekerjaan manual.<br><span class="gradient">Lebih banyak kontrol.</span></h2>
+  <div class="metrics">
+    <div class="metric"><strong>1×</strong><p>Satu ekosistem untuk sekolah, guru, kasir, dan orang tua.</p></div>
+    <div class="metric"><strong>24/7</strong><p>Data dapat diakses kapan saja melalui web responsive.</p></div>
+    <div class="metric"><strong>∞</strong><p>Dibangun dengan arsitektur multi-school untuk pertumbuhan jangka panjang.</p></div>
+  </div>
+</section>
+
+<section id="demo" class="container reveal">
+  <div class="cta-box"><div class="eyebrow">Mulai transformasi</div><h2 class="section-title">Siap membawa sekolah ke level berikutnya?</h2><p class="section-copy" style="margin:0 auto 25px">Lihat bagaimana Agentix AI dapat disesuaikan dengan alur operasional sekolah Anda.</p><a class="btn primary" href="mailto:hello@agentix.ai?subject=Demo%20Agentix%20AI">Minta Demo Agentix AI →</a></div>
+</section>
+
+<footer><div class="container">© 2026 Agentix AI • Platform teknologi sekolah Indonesia</div></footer>
+
+<script>
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
