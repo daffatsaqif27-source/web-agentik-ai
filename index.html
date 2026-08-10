@@ -287,6 +287,28 @@ button, a { -webkit-tap-highlight-color:transparent; }
   .hero-grid > div, .solution > div { min-width:0; }
   h1, .section h2 { overflow-wrap:break-word; }
 }
+
+/* ===== HP VIEW FINAL FIX ===== */
+@media (max-width:640px){
+  .container{width:calc(100% - 48px)!important;}
+  nav{width:calc(100% - 28px)!important;left:14px!important;}
+  .hero{padding-top:95px!important;padding-bottom:25px!important;}
+  .hero h1{font-size:40px!important;line-height:1.06!important;max-width:340px!important;}
+  .hero p{max-width:340px!important;}
+  .hero-art{width:430px!important;height:330px!important;transform:scale(.58)!important;margin:5px auto -90px!important;}
+  .trust{margin-top:18px!important;}
+  .section{padding:55px 0!important;}
+  .pain-grid{gap:14px!important;}
+  .solution-art{height:260px!important;transform:scale(.55)!important;margin-bottom:-90px!important;}
+  .solution .container{gap:0!important;}
+  .cta{margin:30px 16px 45px!important;padding:45px 18px!important;}
+  .cta h2{font-size:30px!important;line-height:1.15!important;}
+}
+@media (min-width:641px) and (max-width:1200px) and (pointer:coarse){
+  .hero-grid,.solution{grid-template-columns:1fr!important;}
+  .links{display:none!important;}
+  .hero-art{margin:auto!important;}
+}
 </style>
 </head>
 <body>
