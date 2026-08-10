@@ -309,6 +309,23 @@ button, a { -webkit-tap-highlight-color:transparent; }
   .links{display:none!important;}
   .hero-art{margin:auto!important;}
 }
+
+/* Fix mobile illustration alignment */
+@media (max-width:640px){
+  .solution-art,
+  .hero-art{
+    left:50% !important;
+    right:auto !important;
+    transform:translateX(-50%) scale(.62) !important;
+    position:relative !important;
+  }
+
+  .solution-art{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
