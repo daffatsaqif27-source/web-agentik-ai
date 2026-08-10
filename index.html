@@ -205,6 +205,59 @@ button, a { -webkit-tap-highlight-color:transparent; }
   .brand-logo{width:132px;max-width:132px}
 }
 
+
+/* Final mobile spacing polish */
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 32px) !important;
+    max-width: 540px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero h1,
+  .hero p,
+  .hero .actions,
+  .hero .trust,
+  .hero .eyebrow {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  h1 {
+    font-size: clamp(36px, 10vw, 50px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -2.2px !important;
+  }
+  .hero p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+  .actions {
+    width: 100% !important;
+  }
+  .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .trust {
+    width: 100% !important;
+  }
+  .section,
+  .cta,
+  footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .section > .container,
+  .cta > .container,
+  footer > .container {
+    width: calc(100% - 32px) !important;
+  }
+}
+
 </style>
 </head>
 <body>
